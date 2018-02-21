@@ -18,8 +18,7 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 */
 
 
-@import "_base",
-"kube/kube";
+@import "kube/kube", "_base";
 
 .vt-space {
     padding-top: 60px;
@@ -28,4 +27,31 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
         padding-top: 120px;
         padding-bottom: 120px;
     }
+}
+
+/* HEADER */
+.site-header {
+    background-color: cornflowerblue;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* LOGO */
+
+.site-branding {
+    padding: 20px;
+    background-color: #fff;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -20px;
+    box-shadow: 0px 1px 3px 0px rgba($color: #000000, $alpha: 0.3);
+}
+
+.logo-container {
+    max-width: 200px;
 }
