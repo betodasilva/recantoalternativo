@@ -1,0 +1,31 @@
+/*!
+Theme Name: recantoalternativo
+Theme URI: 
+Author: Beto da Silva
+Author URI: http://betoo.com.br
+Description: Description
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: recantoalternativo
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+recantoalternativo is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+*/
+
+
+@import "_base",
+"kube/kube";
+
+.vt-space {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    @include desktop{
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+}
