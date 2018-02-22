@@ -25,6 +25,52 @@ function recantoalternativo_customize_register( $wp_customize ) {
 			'render_callback' => 'recantoalternativo_customize_partial_blogdescription',
 		) );
 	}
+
+	/* Front Page Section
+	───────────────────────────────────────────────────────*/
+
+	// Section
+	$wp_customize->add_section( 'front_page', array(
+		'title'		=>	__( 'Front Page', 'recantoalternativo' ),
+		'priority'	=>	30,
+	) );
+
+	// Settings
+	$wp_customize->add_setting( 'frontpage_about-title', array(
+		'capability'	=>	'edit_theme_options',
+		'type'			=>	'theme_mod',
+	) );
+	$wp_customize->add_setting( 'frontpage_about-text', array(
+		'capability'	=>	'edit_theme_options',
+		'type'			=>	'theme_mod',
+	) );
+	$wp_customize->add_setting( 'frontpage_about-img', array(
+		'capability'	=>	'edit_theme_options',
+		'type'			=>	'theme_mod',
+	) );
+	
+	$wp_customize->add_control( new WP_Customize_Control($wp_customize, 'about-title', array(
+		'label'			=>	_('Titulo'),
+		'description'	=>	_('Titulo para a primeira seção da página inicial. Padrão: "Sobre" '),
+		'section'		=>	'front_page',
+		'type'			=>	'text',
+		'settings'		=>	'frontpage_about-title'
+	) ) );
+
+	$wp_customize->add_control( new WP_Customize_Control($wp_customize, 'about-text', array(
+		'label'			=>	_('Texto'),
+		'description'	=>	_('Texto para a primeira seção da página inicial.'),
+		'section'		=>	'front_page',
+		'type'			=>	'textarea',
+		'settings'		=>	'frontpage_about-text'
+	) ) );
+
+	$wp_customize->add_control( new WP_Customize_Image_Control($wp_customize, 'about-img', array(
+		'label'			=>	_('Imagem'),
+		'description'	=>	_('Imagem para a seção sobre da página inicial'),
+		'section'		=>	'front_page',
+		'settings'		=>	'frontpage_about-img'
+	) ) );
 }
 add_action( 'customize_register', 'recantoalternativo_customize_register' );
 
